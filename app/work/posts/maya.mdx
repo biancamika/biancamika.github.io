@@ -1,0 +1,158 @@
+---
+title: 'Customizing financial data reports for weekend market sellers'
+publishedAt: '2024-08-01'
+summary: 'Design challenge I took on for **Maya**, an all-in-one money app in the Philippines.'
+image: '/Maya/Thumbnail_Maya.jpg'
+category: 'Product & Web Design'
+roles: 'Product Design & UX Research'
+timeline: '1-2 weeks'
+visit: 'Check out my [presentation](https://www.figma.com/slides/meeNtUqIBiySWndl2s7oLf/Maya-Panel-Interview-Presentation?node-id=6018-81&t=LzL5xgE6L2HCe3m4-1)'
+---
+
+[Maya](https://maya.ph) is a Filipino financial services and digital payments company that presents itself as "the all-in-one money app for every Filipino."
+
+To provide this, Maya's consumer app combines a feature-rich wallet with a secure, progressive digital banking experience. Meanwhile, Maya's business platform acts as an all-in-one growth partner for SMEs, serving as a place for managing payments and business needs.
+
+##### Challenge
+## How can Maya better serve weekend market sellers' business needs?
+
+To get started on this problem, I quickly interviewed various weekend market sellers like:
+- 🍨 Co-owners of a **F&B stall** in **Legazpi Sunday Market**
+- 👗 Assistant of a **fashion designer** who often joins **pop-up events**
+- 🎨 **Artist** who often participates in **art markets/artist alleys**
+
+Across these interviews, I saw these **common problems:**
+- **Bookkeeping + accounting:** 
+    - Keeping track of transactions can be confusing, especially mixed with personal transactions
+    - Daunting to apply for business loans due to audited financial statements
+- **Payment processing:**
+    - Transactions can experience lag or even fail if there’s slow wi-fi/data connection
+    - Sometimes, sellers still take pictures of digital receipts to take note of confirmed transactions
+- **Marketing & customer acquisition:**
+    - It’s difficult to stand out as one stall in a crowded market. Price lists may also be hard to see or non-existent
+    - Online sales can be difficult to acquire 
+
+Based on these problems, here are the **potential opportunities** I saw for Maya:  
+- **📴 Offline payment:** Done asynchronously or through NFC technology 
+- **🏷️ Discount QR codes:** Done through custom QR code generation
+- **🔗 Referral links:** Based on Disbursements in Maya Business
+- **👥 Integrated CRM:** Notes transaction history + shopping patterns
+- **📊 Custom reports:** Filtered views of financial data (e.g. transactions)
+
+To evaluate which of these solutions would be the best to work on, I used an **Impact-Effort Matrix.**
+
+In the end, **custom reports** stood out as the idea that would be the best to work on.
+
+##### Solution
+## My proposal: customizable financial data reporting
+This solution would come in two forms, tailored to different platforms.
+- For **Maya Personal,** this would look like Search, Filter, and Export transaction history 🔍
+- For **Maya Business,** this would look like Report dashboards (based on transactions + disbursements) 📊
+
+### Rationale
+
+Aside from the Impact-Effort matrix, my proposal was also based on interview insights and Maya's current limitations.
+
+My main takeaway from the interviews was that **not all weekend market sellers are fully fleshed out businesses.** Some just want to sell their own goods at pop-up events, which don't require business documents. Thus, they use their personal account to receive transactions. This is why I thought it was crucial to work on Maya Personal, not just Maya Business.
+
+And for sellers on both sides of the spectrum (from individual sellers to registered businesses), **keeping track of cash flow can be challenging** — especially when personal accounts (and personal transactions) are also involved.
+
+<div className="flex flex-col gap-4 my-8">
+    <img className="w-full" src="/Maya/Spectrum.jpg" />
+    <p className="text-center text-sm">Spectrum of weekend market sellers</p>
+</div>
+
+So sellers need to be able to easily retrieve and analyze the financial data that they need, whether they're using personal or business accounts. However, Maya's current limitations make these actions difficult, if not impossible.
+
+<div className="flex flex-col md:grid md:grid-cols-2 gap-4 my-8">
+    <div className="flex flex-col gap-4">
+        <img className="w-full aspect-video" src="/Maya/Limitation_Personal_1.jpg" />
+        <p className="text-center">Maya Personal users cannot <strong>search or filter</strong> transactions. It’d be hard to find an old/specific one.</p>
+    </div>
+    <div className="flex flex-col gap-4">
+        <img className="w-full aspect-video" src="/Maya/Limitation_Personal_2.jpg" />
+        <p className="text-center">Maya Personal users <strong>cannot export</strong> statements on their own; they have to wait for them to be <strong>e-mailed.</strong></p>
+    </div>
+    <div className="flex flex-col md:col-span-2 gap-4">
+        <img className="w-full" src="/Maya/Limitation_Business_1.jpg" />
+        <p className="text-center">While Maya Business users can export CSVs of their transactions and disbursements...it’s <strong>difficult to see</strong> how these all fit together into the <strong>overall picture</strong> of their business.</p>
+    </div>
+</div>
+
+So this left me with this guiding question: **How might we (Maya) help weekend market sellers turn financial data into actionable business insights?**
+- As a weekend market seller, I want to be able to **easily retrieve the financial data** that I need so that I **won’t have to spend too much time on administrative tasks.**
+- As a weekend market seller, I want to be able to **easily analyze my financial data** so that I can **make data-driven decisions to grow and improve my business efficiently.**
+
+### Walkthrough 
+
+#### Maya Personal
+
+In Maya's consumer app, weekend market sellers will now have an easier time searching, filtering, and exporting transaction history. 
+
+<div className="flex flex-col md:grid md:grid-cols-2 gap-4 my-8">
+    <div className="flex flex-col gap-4">
+        <img className="w-full aspect-square" src="/Maya/Prototype_Personal_1.gif" />
+        <div className="text-center px-2">
+            <p>Say goodbye to <strong>needless scrolling,</strong> and hello to <strong>fast search.</strong> Perfect for sellers trying to compute how much they bought from a supplier.</p>
+        </div>
+    </div>
+    <div className="flex flex-col gap-4">
+        <img className="w-full aspect-square" src="/Maya/Prototype_Personal_2.gif" />
+        <div className="text-center px-2">
+            <p><strong>Make sense</strong> of your transactions anytime, anywhere. Perfect for sellers trying to compute how much income they made over a weekend.</p>
+        </div>
+    </div>
+    <div className="flex flex-col gap-4">
+        <img className="w-full aspect-square" src="/Maya/Prototype_Personal_3.gif" />
+        <div className="text-center px-2">
+            <p><strong>Filter</strong> your transaction history to help with making <strong>financial statements.</strong></p>
+        </div>
+    </div>
+    <div className="flex flex-col gap-4">
+        <div className="aspect-square bg-white flex items-center overflow-hidden">
+            <img className="scale-190" src="/Maya/Prototype_Personal_4.gif" />
+        </div>
+        <div className="text-center px-2">
+            <p><strong>Export</strong> your transaction history whenever you want; no more need to wait for a monthly email.</p>
+        </div>
+    </div>
+</div>
+
+How would these functions be used by a weekend market seller? Let's put ourselves in the shoes of **a fan artist selling at an anime convention**...
+- **At the end of the first day:** The artist can filter their transactions to see how much revenue they made so far. They can also see how much they spent for that day (e.g. food, transportation).
+- **At the end of the entire weekend:** To compute their net profit, the artist can use filter + search to not just see their revenue, but also costs like food + transportation for 2 days, and materials + printing before the event.
+
+#### Maya Business
+
+In Maya's business platform, weekend market sellers will now have an easier time analyzing their transactions and disbursements.
+
+<div className="flex flex-col gap-4 my-8">
+    <img className="w-full" src="/Maya/Prototype_Business_1.gif" />
+    <p className="text-center">Get an <strong>overall picture</strong> of your business based on transactions + disbursements done through Maya.</p>
+</div>
+
+<div className="flex flex-col gap-4 my-8">
+    <div className="bg-white grid grid-cols-2 p-4">
+        <img className="scale-75" src="/Maya/Prototype_Business_2.png" />
+        <img className="scale-75" src="/Maya/Prototype_Business_3.png" />
+    </div>
+    <p className="text-center">Know how exactly you’re <strong>earning money</strong> (transactions), and how exactly it’s <strong>being spent</strong> (disbursements).</p>
+</div>
+
+How would these functions be used by a weekend market seller? Let's put ourselves in the shoes of **a co-owner managing their small F&B business**...
+- **During every weekend:** The co-owner personally participates in weekend markets. Both revenue and operating costs (e.g. riders for weekday orders) are tracked in Maya Business.
+- **At the end of every month:** The co-owner makes an income statement in Google Sheets/Excel to see how business went. They're able to get the numbers they easily need from the dashboards.
+
+
+##### Measuring Success
+## Here are some ways I'd measure success...
+
+- For **Maya Personal:**
+    - **Feature usage rate:** How much is the percentage of users that regularly utilize these features?
+    - **Repeat usage:** How often are these features utilized by a single user over time?
+    - **Time saved on searching:** How much time does a user save in finding a specific transaction?
+- For **Maya Business:**
+    - **Engagement rate:** How frequently do users utilize the report dashboards? What is the typical duration of these sessions?
+    - **Time saved on reporting:** How much time do users save in making or calculating financial statements (e.g. income statement)?
+    - **Insight-to-action ratio:** Do views of these dashboards lead  to measurable business actions or decisions?
+

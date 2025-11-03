@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+::selection {
+  background-color: var(--color-pink-500);
+  color: #fefefe;
+}
+
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-string: #007f7a;
+  --sh-keyword: #e02518;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sh-class: #4c97f8;
+    --sh-identifier: white;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
+  }
+  html {
+    color-scheme: dark;
+  }
+}
+
+html {
+  min-width: 360px;
+  cursor: url("/ddr-arrow.png"), auto; 
+}
+
+body {
+  font-family: var(--font-funnel-sans), sans-serif;
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a, .markdown a {
+  @apply underline transition-all text-white hover:text-pink-500 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose p {
+  @apply mb-4 text-stone-300;
+}
+
+.prose h1 {
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  font-family: var(--font-funnel-display);
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mb-4;
+  font-family: var(--font-funnel-display);
+}
+
+.prose h3 {
+  @apply text-xl font-bold mt-6 mb-2;
+  font-family: var(--font-funnel-display);
+}
+
+.prose h4 {
+  @apply text-lg font-bold mt-6 mb-2;
+  font-family: var(--font-funnel-display);
+}
+
+.prose h5 {
+  @apply uppercase text-stone-400 text-sm mt-6 mb-1;
+  font-family: var(--font-azeret-mono);
+}
+
+.prose strong {
+  @apply font-semibold text-white;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4 text-stone-300;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-4 text-stone-300;
+}
+
+/*
+.prose > :first-child {
+  // Override removing top margin, causing layout shift
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+*/
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.title {
+ @apply font-bold text-3xl
+}
+
+a, button {
+  cursor: url("/ddr-arrow_pointer.png"), auto;
+}
+
+.font-display {
+  font-family: var(--font-funnel-display);
+}
+
+.font-monospace {
+  font-family: var(--font-azeret-mono);
+}
+
+#nav-home {
+  font-family: var(--font-funnel-display) !important;
+  font-weight: 800 !important;
+  font-size: 1.5rem !important;
+  text-transform: capitalize !important;
+  background: linear-gradient(135deg, var(--color-pink-500) 25%, var(--color-pink-300) 50%, var(--color-pink-500) 75%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+#nav a {
+  font-family: var(--font-azeret-mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--color-stone-300);
+  transition: color 0.25s;
+}
+
+#nav a:hover {
+  color: white;
+}
+
+#nav a:active {
+  color: var(--color-pink-600);
+}
+
+#name-span {
+  font-family: var(--font-funnel-display);
+  font-weight: 600;
+  color: var(--color-pink-400);
+}
+
+.home-links a {
+  font-family: var(--font-azeret-mono);
+  text-transform: uppercase;
+  color: var(--color-stone-300);
+  transition: color 0.25s;
+}
+
+.home-links a:hover {
+  color: white;
+}
+
+h3[id], h5[id] {
+  scroll-margin-top: 4rem;
+}
