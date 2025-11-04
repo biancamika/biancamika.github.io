@@ -6,11 +6,11 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const navItems = {
-  '/work/': {
+  '/work': {
     name: 'Work',
     isExternal: false
   },
-  '/about/': {
+  '/about': {
     name: 'About',
     isExternal: false
   },
