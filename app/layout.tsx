@@ -27,8 +27,8 @@ const azeretMono = Azeret_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Bianca Mikaila',
-    template: '%s | Bianca Mikaila',
+    default: 'Bianca Aguilar',
+    template: '%s | Bianca Aguilar',
   },
   description: 'This is my portfolio.',
   openGraph: {
@@ -69,6 +69,9 @@ export default function RootLayout({
         azeretMono.variable
       )}
     >
+      <head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+      </head>
       <body className="antialiased w-full h-screen">
         <main className="flex-auto min-w-0 flex flex-col h-full">
           <Navbar />
