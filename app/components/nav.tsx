@@ -3,13 +3,14 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navItems = {
-  '/work': {
+  '/work/': {
     name: 'Work',
     isExternal: false
   },
-  '/about': {
+  '/about/': {
     name: 'About',
     isExternal: false
   },
@@ -21,6 +22,7 @@ const navItems = {
 
 export function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prevState) => !prevState);
@@ -55,7 +57,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="flex align-middle relative py-1 px-2 m-1"
+                  className={`flex align-middle relative py-1 px-2 m-1 ${pathname === path ? 'active' : ''}`}
                 >
                   {name}
                 </Link>
@@ -82,7 +84,7 @@ export function Navbar() {
                   <Link
                     key={path}
                     href={path}
-                    className="flex align-middle relative py-1 px-2 m-1"
+                    className={`flex align-middle relative py-1 px-2 m-1 ${pathname === path ? 'active' : ''}`}
                   >
                     {name}
                   </Link>
