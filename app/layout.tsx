@@ -30,8 +30,7 @@ export const metadata: Metadata = {
     default: 'Bianca Aguilar',
     template: '%s | Bianca Aguilar',
   },
-  description: 'Cultivating budding ideas and minds through design and research.',
-  manifest: '/manifest.webmanifest',
+  description: 'This is my portfolio.',
   openGraph: {
     title: 'Bianca Aguilar',
     description: 'Cultivating budding ideas and minds through design and research.',
@@ -39,20 +38,6 @@ export const metadata: Metadata = {
     siteName: 'Bianca Aguilar',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: '/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Bianca Aguilar\'s portfolio website',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Bianca Aguilar',
-    description: 'Cultivating budding ideas and minds through design and research.',
-    images: ['/opengraph-image.jpg'],
   },
   robots: {
     index: true,
