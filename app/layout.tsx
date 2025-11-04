@@ -30,14 +30,29 @@ export const metadata: Metadata = {
     default: 'Bianca Aguilar',
     template: '%s | Bianca Aguilar',
   },
-  description: 'This is my portfolio.',
+  description: 'Cultivating budding ideas and minds through design and research.',
+  manifest: '/manifest.webmanifest',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Bianca Aguilar',
+    description: 'Cultivating budding ideas and minds through design and research.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Bianca Aguilar',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bianca Aguilar\'s portfolio website',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bianca Aguilar',
+    description: 'Cultivating budding ideas and minds through design and research.',
+    images: ['/opengraph-image.jpg'],
   },
   robots: {
     index: true,
@@ -69,9 +84,6 @@ export default function RootLayout({
         azeretMono.variable
       )}
     >
-      <head>
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-      </head>
       <body className="antialiased w-full h-screen">
         <main className="flex-auto min-w-0 flex flex-col h-full">
           <Navbar />
