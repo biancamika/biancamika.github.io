@@ -28,8 +28,8 @@ export default function Page() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="w-full h-1/3 sm:h-1/4 flex flex-col sm:flex-row gap-4 sm:gap-0 items-center px-4 py-4 sm:px-20">
-        <div className="sm:w-3/4">
+      <div className="w-full h-1/3 sm:h-1/4 flex flex-col sm:flex-row sm:gap-0 items-center px-4 py-4 sm:px-20">
+        <div className="sm:w-4/5">
           <p className="text-2xl sm:text-3xl text-stone-300 text-center sm:text-left"><span id="name-span">Bianca Aguilar</span> is a Filipina 
           <AnimatePresence mode="wait" initial={false}>
             <motion.span key={currentRole}>
@@ -66,7 +66,7 @@ export default function Page() {
           </AnimatePresence>
           cultivating budding ideas and minds.</p>
         </div>
-        <div className="home-links sm:w-1/4 flex flex-col items-center sm:items-end gap-1">
+        <div className="home-links sm:w-1/5 flex flex-col items-center sm:items-end gap-1">
           <a href="/work">Check out my work</a>
           <a href="/about">Learn more about me</a>
         </div>
