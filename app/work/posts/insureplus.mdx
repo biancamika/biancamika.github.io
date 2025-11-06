@@ -1,0 +1,98 @@
+---
+title: 'Streamlining the process of comparing insurance policies'
+publishedAt: '2020-12-01'
+summary: 'Product design and automation **InsurePlus**, a special membership program where people can get life insurance from all the top providers in the Philippines.'
+image: '/InsurePlus/Thumbnail_InsurePlus.jpg'
+category: 'Product & Web Design'
+roles: 'Product Design, Operations, Graphic Design'
+timeline: 'May 2020 - December 2020 (8 months)'
+---
+##### Problem
+## Choosing the best insurance provider is a challenging process.
+
+In the eyes of the Filipino layman, insurance providers are difficult to differentiate from. Their proposals aren’t user-friendly at all, filled with verbose paragraphs and dense tables.
+
+##### Solution
+## What I proposed: personally tailored proposal comparisons
+
+I created a proposal summary template consisting of the following:
+- **The customer's monthly budget** (the basis of the proposal)
+- **A comparison matrix** (i.e. product details, insurance premium, insurance benefits, investments)
+
+The proposal summary changes **depending on the number of proposals** that are fit for the customer. 
+
+<div className="flex flex-col gap-3 mt-8 mb-4">
+    <img className="w-full" src="/InsurePlus/InsurePlus_Proposal-Variations.jpg" />
+    <p className="text-sm text-center">Note: Had to change from logos to colors in order to avoid getting in trouble with  the involved companies</p>
+</div>
+
+Accompanying the main proposal summary is a preview of the **rewards tiers** they could avail through the InsurePlus program.
+
+<div className="my-8">
+    <img className="w-full" src="/InsurePlus/InsurePlus_Proposal+Rewards.jpg" />
+</div>
+
+Durng the earlier stages of InsurePlus, its value proposition was more focused on **rewards.** 
+
+<div className="flex flex-col gap-3 mt-8 mb-4">
+    <div className="grid grid-cols-2 gap-4 p-4 bg-[#D5E1F6]">
+        <img src="/InsurePlus/InsurePlus_Rewards-Overview.jpg" />
+        <img src="/InsurePlus/InsurePlus_Rewards-Individual.gif" />
+    </div>
+    <p className="text-sm text-center">Left: overview of rewards tiers; right: individual pages for each rewards tier</p>
+</div>
+
+However, this had to be changed because of the following reasons:
+- Marketing focused on rewards **attracted low-quality leads** (i.e. only looking for freebies, no interest in insurance)
+- InsurePlus could have been accused of **inducement**
+- UX research showed that customers **cared more about the insurance** itself
+
+##### Proposal Generation Workflow 
+## How could the team keep up with the demand?
+
+When we started sending these summaries out, response rates to our e-mails skyrocketed. However, this came at a cost; so many leads were asking for summaries, and the team struggle to deliver since they were still making these summaries manually.
+
+To make operations easier, I configured the proposal templates to **sync with Google Sheets.** Here's how the templates would be generated:
+1. Insurance agent computes for values based on chosen proposals (e.g. monthly/quarterly payments, personal rating), then adds a row with all the data in a separate sheet.
+2. Insurance agent goes to the Figma file with the insurance templates, then duplicates a new one.
+3. Insurance agent activates the Google Sheets Sync plugin.
+3. The duplicated template is populated with new data.
+
+<div className="my-8">
+    <img className="w-full" src="/InsurePlus/InsurePlus_Workflow-Current.jpg" />
+</div>
+
+With this, the team no longer had to copy paste data from sheets into the templates, since the whole process was automated for them.
+
+##### Proposed Improvements
+## How could proposal generation be further optimized? 
+
+While this template + workflow helped us moved faster back then (in 2020), it still wasn't the most optimized. This is because **a lot still had to done manually**, from selecting InsurePlus' "Our Pick" to exporting the entire template.
+
+Because of this, it required being able to use Figma. While I recorded a Loom tutorial to guide the other team members through the process, this didn't make it fully accessible. What if there were other agents who had less technical savvy? Thus, this process would not be **scalable** over time. 
+
+What I'd do today is **remake the entire workflow with automation**. This could be done with no-code software like Airtable and Make, but it could also be fully developed.
+
+<div className="my-8">
+    <img className="w-full" src="/InsurePlus/InsurePlus_Workflow-New.jpg" />
+</div>
+
+All the agent would have to do is fill out a form, making the **UX for inputting data much easier.**
+
+<div className="my-8">
+    <img className="w-full" src="/InsurePlus/InsurePlus_Input-UX.jpg" />
+</div>
+
+If automation can free insurance agents from manually reaching out to their leads, it should also be able to help with **tracking leads** and **following up on them**. AI could be used to help categorize leads by warmth. Then, following up on them could be automated depending on this status.
+
+<div className="flex gap-4 my-8">
+    <div className="flex flex-col gap-3">
+        <img className="w-full" src="/InsurePlus/InsurePlus_Follow-Up.jpg" />
+        <p className="text-sm text-center">Diagram of follow-up automation</p>
+    </div>
+    <div className="flex flex-col gap-3">
+        <img className="w-full" src="/InsurePlus/InsurePlus_Lead-Status.jpg" />
+        <p className="text-sm text-center">Pie chart based on lead status</p>
+    </div>
+</div>
+

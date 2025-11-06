@@ -113,7 +113,7 @@ export default async function Blog({ params }) {
           <h1 className="title font-display">
             {post.metadata.title}
           </h1>
-          <div className="flex flex-col md:grid md:grid-cols-3 w-full gap-5">
+          <div className={`flex flex-col md:grid ${post.metadata.visit ? "md:grid-cols-3" : "md:grid-cols-2"} w-full gap-5`}>
             <div className="flex flex-col gap-2">
               <p className="uppercase text-sm text-stone-400">Roles</p>
               <div>
@@ -126,10 +126,12 @@ export default async function Blog({ params }) {
                 <MarkdownText content={post.metadata.timeline || ''} />
               </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <p className="uppercase text-sm text-stone-400">Visit</p>
-              <MarkdownText content={post.metadata.visit || ''} />
-            </div>
+            {post.metadata.visit && (
+              <div className="flex flex-col gap-2">
+                <p className="uppercase text-sm text-stone-400">Visit</p>
+                <MarkdownText content={post.metadata.visit || ''} />
+              </div>
+            )}
           </div>
           <article className="prose">
             <CustomMDX source={post.content} />
