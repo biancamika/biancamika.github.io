@@ -113,7 +113,7 @@ export default async function Blog({ params }) {
           <h1 className="title font-display">
             {post.metadata.title}
           </h1>
-          <div className={`flex flex-col md:grid ${post.metadata.visit ? "md:grid-cols-3" : "md:grid-cols-2"} w-full gap-5`}>
+          <div className={`flex flex-col md:grid ${post.metadata.visit ? "md:grid-cols-3" : "md:grid-cols-2"} w-full gap-5 mt-3 mb-4`}>
             <div className="flex flex-col gap-2">
               <p className="uppercase text-sm text-stone-400">Roles</p>
               <div>
