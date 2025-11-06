@@ -37,7 +37,7 @@ export default function Content({
 
 
   return (
-    <section className="md:px-20 flex flex-col md:flex-row gap-6 md:gap-8">
+    <section className="pb-8 md:px-20 flex flex-col md:flex-row gap-6 md:gap-6 mt-16 md:mt-0">
       <div className="md:w-1/3 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:gap-6 md:justify-center">
         <h1 className="hidden md:block font-display font-bold text-3xl">
             Filter

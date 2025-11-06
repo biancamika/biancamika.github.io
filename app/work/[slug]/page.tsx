@@ -89,8 +89,8 @@ export default async function Blog({ params }) {
           }),
         }}
       />
-      <div className="w-full p-4 md:p-20 flex flex-col md:flex-row gap-6 md:gap-8">
-        <div className="md:w-1/4 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:gap-6 md:justify-center">
+      <div className="w-full px-4 pb-8 md:px-20 md:py-20 flex flex-col md:flex-row gap-6 md:gap-8">
+        <div className="md:w-1/4 md:sticky md:top-0 md:h-screen md:flex md:flex-col md:gap-6 md:justify-center mt-16 md:mt-0">
           <a 
             href="/work"
             className="flex items-center gap-2 text-stone-300 hover:text-white transition-colors duration-250"
@@ -113,7 +113,7 @@ export default async function Blog({ params }) {
           <h1 className="title font-display">
             {post.metadata.title}
           </h1>
-          <div className={`flex flex-col md:grid ${post.metadata.visit ? "md:grid-cols-3" : "md:grid-cols-2"} w-full gap-5 mt-3 mb-4`}>
+          <div className={`flex flex-col md:grid ${post.metadata.visit ? "md:grid-cols-3" : "md:grid-cols-2"} w-full gap-5 mt-3 mb-3 md:mb-4`}>
             <div className="flex flex-col gap-2">
               <p className="uppercase text-sm text-stone-400">Roles</p>
               <div>
