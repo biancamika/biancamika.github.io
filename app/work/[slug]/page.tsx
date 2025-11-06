@@ -56,7 +56,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default async function Blog({ params }) {
+export default async function Project({ params }) {
 
   const resolvedParams = await params
   let post = getBlogPosts().find((post) => post.slug === resolvedParams.slug)

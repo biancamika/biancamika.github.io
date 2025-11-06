@@ -4,7 +4,7 @@ import { BlogPosts } from 'app/components/posts'
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
-export default function Page() {
+export default function HomePage() {
   const roles = [' designer ', ' developer ', ' researcher ', ' writer ', ' dancer '];
   const [currentRole, setCurrentRole] = useState(roles[0]);
 
@@ -21,7 +21,7 @@ export default function Page() {
   }, []);
 
   return (
-    <section className="h-full mt-14">
+    <section className="h-full pt-14">
       <div className="w-full h-2/3 sm:h-3/4 relative overflow-hidden bg-pink-600">
         <video muted autoPlay playsInline loop preload="auto" className="absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover">
           <source src="/hero-visual.mp4" type="video/mp4" />

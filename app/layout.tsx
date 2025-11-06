@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import PageTransition from './components/transition'
 
 const funnelDisplay = Funnel_Display({
   subsets: ['latin'],
@@ -72,7 +73,9 @@ export default function RootLayout({
       <body className="antialiased w-full h-screen">
         <main className="flex-auto min-w-0 flex flex-col h-full">
           <Navbar />
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
           {/* <Footer /> */}
           <Analytics />
           <SpeedInsights />

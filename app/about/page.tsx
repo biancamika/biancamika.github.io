@@ -1,4 +1,4 @@
-export default function Page() {
+export default function AboutPage() {
     return (
         <section className="w-full flex items-center justify-center p-20">
             <article className="prose w-full max-w-3xl">
