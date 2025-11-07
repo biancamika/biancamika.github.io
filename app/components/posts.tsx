@@ -1,8 +1,17 @@
 import Card from './card'
 
-export function BlogPosts({ posts }: { posts: any[] }) {
+type PostProps = {
+  posts: any[]
+  variant?: 'default' | 'selected'
+}
+
+export function Posts({ posts, variant = 'default' }: PostProps) {
+  const postsLayout = variant === 'selected'
+    ? "flex flex-col gap-8"
+    : "grid grid-cols-1 sm:grid-cols-2 gap-8"
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div className={postsLayout}>
       {posts
         .sort((a, b) => {
           if (
@@ -13,7 +22,7 @@ export function BlogPosts({ posts }: { posts: any[] }) {
           return 1
         })
         .map((post) => (
-          <Card key={post.slug} post={post} />
+          <Card key={post.slug} post={post} variant={variant} />
         ))}
     </div>
   )

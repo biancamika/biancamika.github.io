@@ -76,7 +76,7 @@ export default function RootLayout({
           <PageTransition>
             {children}
           </PageTransition>
-          {/* <Footer /> */}
+          <Footer />
           <Analytics />
           <SpeedInsights />
         </main>

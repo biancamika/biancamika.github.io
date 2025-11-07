@@ -1,9 +1,9 @@
-import { getBlogPosts } from 'app/work/utils'
+import { getPosts } from 'app/work/utils'
 
 export const baseUrl = 'https://bianca.digital'
 
 export default async function sitemap() {
-  let posts = getBlogPosts().map((post) => ({
+  let posts = getPosts().map((post) => ({
     url: `${baseUrl}/work/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }))

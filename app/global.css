@@ -232,3 +232,7 @@ a, button {
 h3[id], h5[id] {
   scroll-margin-top: 4rem;
 }
+
+.social a {
+  @apply text-stone-300 hover:text-white;
+}

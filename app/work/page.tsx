@@ -1,7 +1,7 @@
 import Content from './content'
-import { getBlogPosts } from 'app/work/utils' // Fetch posts server-side
+import { getPosts } from 'app/work/utils' // Fetch posts server-side
 
 export default function WorkPage() {
-  const allProjects = getBlogPosts() 
+  const allProjects = getPosts() 
   return <Content allProjects={allProjects} initialCategory="All Projects" />
 }

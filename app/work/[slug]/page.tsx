@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { getBlogPosts } from 'app/work/utils'
+import { getPosts } from 'app/work/utils'
 import { baseUrl } from 'app/sitemap'
 import { ArrowLeft } from 'lucide-react'
 import ScrollProgressBar from 'app/components/scrollbar'
@@ -8,7 +8,7 @@ import PostOutline from 'app/components/outline'
 import { MarkdownText } from 'app/components/markdown'
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts()
+  let posts = getPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
-  let post = getBlogPosts().find((post) => post.slug === resolvedParams.slug)
+  let post = getPosts().find((post) => post.slug === resolvedParams.slug)
   if (!post) {
     return
   }
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
 export default async function Project({ params }) {
 
   const resolvedParams = await params
-  let post = getBlogPosts().find((post) => post.slug === resolvedParams.slug)
+  let post = getPosts().find((post) => post.slug === resolvedParams.slug)
 
   if (!post) {
     notFound()

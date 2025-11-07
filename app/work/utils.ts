@@ -12,6 +12,7 @@ type Metadata = {
   roles?: string
   timeline?: string
   visit?: string
+  selected?: boolean
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -26,7 +27,15 @@ function parseFrontmatter(fileContent: string) {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
+    
+    const trimmedKey = key.trim() as keyof Metadata
+
+    // Parse boolean values
+    if (value === 'true' || value === 'false') {
+      metadata[trimmedKey] = (value === 'true') as any
+    } else {
+      metadata[trimmedKey] = value as any
+    }
   })
 
   return { metadata: metadata as Metadata, content }
@@ -61,7 +70,7 @@ function getExternalLinks() {
 }
 
 
-export function getBlogPosts() {
+export function getPosts() {
   const internalPosts = getMDXData(path.join(process.cwd(), 'app', 'work', 'posts'))
   const externalLinks = getExternalLinks()
 

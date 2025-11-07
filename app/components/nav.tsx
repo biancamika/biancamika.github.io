@@ -68,7 +68,7 @@ export function Navbar() {
         {/* Mobile nav menu */}
         {isMobileMenuOpen && (
           <div className="w-full bg-black">
-            <div className="flex flex-col px-[0.5rem] py-3 gap-0">
+            <div className="flex flex-col px-2 py-3 gap-0">
               {Object.entries(navItems).map(([path, { name, isExternal }]) => {
                 return isExternal? (
                   <a

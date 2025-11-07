@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { BlogPosts } from 'app/components/posts'
+import { Posts } from 'app/components/posts'
 
 export const categories = [
   'All Projects', 
@@ -62,7 +62,7 @@ export default function Content({
       </div>
       <div className="md:w-2/3 md:mt-14">
         <div className="px-4 md:px-0 transition-opacity duration-500">
-            <BlogPosts posts={filteredProjects} />
+            <Posts posts={filteredProjects} />
         </div>
       </div>
     </section>
